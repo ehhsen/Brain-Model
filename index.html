@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Human Information Processing Model</title>
+    <link rel="stylesheet" href="style.css">
+ 
+</head>
+<body>
+    <h1>Human Information Processing Model</h1>
+    
+    <div class="main-container">
+        <!-- Left Section: Headings -->
+        <div class="left-section">
+            <div class="heading-item" onclick="selectComponent('perceptual')">
+                <h2>Perceptual Processor</h2>
+            </div>
+            <div class="heading-item" onclick="selectComponent('cognitive')">
+                <h2>Cognitive Processor</h2>
+            </div>
+            <div class="heading-item" onclick="selectComponent('motor')">
+                <h2>Motor Processor</h2>
+            </div>
+            <div class="heading-item" onclick="selectComponent('memory')">
+                <h2>Memory System</h2>
+            </div>
+        </div>
+
+        <!-- Right Section: Brain Image and Content -->
+        <div class="right-section">
+            <div class="brain-container">
+                <svg class="brain-svg" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Brain outline -->
+                    <ellipse cx="200" cy="200" rx="180" ry="190" fill="#f0f0f0" stroke="#999" stroke-width="2"/>
+                    
+                    <!-- Perceptual Processor (Occipital/Visual area - back of brain) -->
+                    <path id="perceptual-part" class="brain-part" 
+                          d="M 340 180 Q 360 200 340 220 Q 320 240 300 250 Q 290 230 285 200 Q 290 170 300 150 Q 320 160 340 180 Z" 
+                          fill="#FF6B6B" 
+                          stroke="#CC5555" 
+                          stroke-width="2"
+                          onclick="selectComponent('perceptual')"/>
+                    <text x="315" y="205" fill="white" font-size="12" font-weight="bold" pointer-events="none">HPP</text>
+                    
+                    <!-- Cognitive Processor (Frontal lobe - front of brain) -->
+                    <path id="cognitive-part" class="brain-part" 
+                          d="M 60 180 Q 40 200 60 220 Q 80 240 100 250 Q 110 230 115 200 Q 110 170 100 150 Q 80 160 60 180 Z" 
+                          fill="#4ECDC4" 
+                          stroke="#3DA9A2" 
+                          stroke-width="2"
+                          onclick="selectComponent('cognitive')"/>
+                    <text x="75" y="205" fill="white" font-size="12" font-weight="bold" pointer-events="none">HCP</text>
+                    
+                    <!-- Motor Processor (Motor cortex - top center) -->
+                    <path id="motor-part" class="brain-part" 
+                          d="M 150 50 Q 200 40 250 50 Q 260 80 250 110 Q 200 120 150 110 Q 140 80 150 50 Z" 
+                          fill="#95E1D3" 
+                          stroke="#75C1B3" 
+                          stroke-width="2"
+                          onclick="selectComponent('motor')"/>
+                    <text x="180" y="85" fill="white" font-size="12" font-weight="bold" pointer-events="none">HMP</text>
+                    
+                    <!-- Memory System (Temporal/Hippocampus - center/side) -->
+                    <path id="memory-part" class="brain-part" 
+                          d="M 150 180 Q 200 170 250 180 Q 260 210 250 240 Q 200 250 150 240 Q 140 210 150 180 Z" 
+                          fill="#F38181" 
+                          stroke="#D36161" 
+                          stroke-width="2"
+                          onclick="selectComponent('memory')"/>
+                    <text x="175" y="215" fill="white" font-size="12" font-weight="bold" pointer-events="none">Memory</text>
+                    
+                    <!-- Brain details/folds -->
+                    <path d="M 100 120 Q 150 100 200 120" fill="none" stroke="#ddd" stroke-width="2"/>
+                    <path d="M 200 120 Q 250 100 300 120" fill="none" stroke="#ddd" stroke-width="2"/>
+                    <path d="M 100 160 Q 150 140 200 160" fill="none" stroke="#ddd" stroke-width="2"/>
+                    <path d="M 200 160 Q 250 140 300 160" fill="none" stroke="#ddd" stroke-width="2"/>
+                    <path d="M 100 280 Q 150 260 200 280" fill="none" stroke="#ddd" stroke-width="2"/>
+                    <path d="M 200 280 Q 250 260 300 280" fill="none" stroke="#ddd" stroke-width="2"/>
+                </svg>
+            </div>
+
+            <div class="placeholder">
+                Click on any heading or brain part to learn more
+            </div>
+
+            <!-- Perceptual Processor Content -->
+            <div id="perceptual-content" class="content-section">
+                <h3>Perceptual Processor</h3>
+                <p>
+                    The Perceptual Processor is responsible for receiving and encoding sensory information from the environment. Located primarily in the occipital lobe (visual processing) and temporal regions (auditory processing), it processes inputs through multiple channels including visual, auditory, and haptic modalities.
+                </p>
+                <p>
+                    This processor converts raw sensory data into meaningful representations that can be used by the cognitive system. It operates automatically and continuously monitors the environment for relevant stimuli, filtering important information from background noise.
+                </p>
+                <div class="specs">
+                    <h4>Technical Specifications</h4>
+                    <div class="spec-item">
+                        <span class="spec-label">Cycle Time:</span>
+                        <span class="spec-value">~100 milliseconds</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Primary Function:</span>
+                        <span class="spec-value">Sensory Input Processing</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Channels:</span>
+                        <span class="spec-value">Visual, Auditory, Haptic</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cognitive Processor Content -->
+            <div id="cognitive-content" class="content-section">
+                <h3>Cognitive Processor</h3>
+                <p>
+                    The Cognitive Processor is the central processing unit of human cognition, primarily located in the frontal lobe. It performs complex mental operations including decision-making, problem-solving, reasoning, and computation based on information received from the perceptual system and retrieved from memory.
+                </p>
+                <p>
+                    This processor interprets sensory information, makes judgments, plans actions, and coordinates overall cognitive function. It operates serially, handling one cognitive operation at a time, which explains why multitasking can be challenging and often leads to performance decrements.
+                </p>
+                <div class="specs">
+                    <h4>Technical Specifications</h4>
+                    <div class="spec-item">
+                        <span class="spec-label">Cycle Time:</span>
+                        <span class="spec-value">~70 milliseconds</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Primary Function:</span>
+                        <span class="spec-value">Thinking & Reasoning</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Processing Mode:</span>
+                        <span class="spec-value">Serial (One at a time)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Motor Processor Content -->
+            <div id="motor-content" class="content-section">
+                <h3>Motor Processor</h3>
+                <p>
+                    The Motor Processor, located in the motor cortex at the top of the brain, translates cognitive decisions and intentions into physical actions and movements. It controls voluntary muscle movements and executes behavioral responses determined by the cognitive processor.
+                </p>
+                <p>
+                    This system coordinates complex motor sequences, from simple button presses to intricate physical tasks like typing or playing sports. It receives commands from the cognitive processor and converts them into precise muscle activations, maintaining fine motor control and movement coordination.
+                </p>
+                <div class="specs">
+                    <h4>Technical Specifications</h4>
+                    <div class="spec-item">
+                        <span class="spec-label">Cycle Time:</span>
+                        <span class="spec-value">~70 milliseconds</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Primary Function:</span>
+                        <span class="spec-value">Physical Response Execution</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Output:</span>
+                        <span class="spec-value">Motor Actions & Movements</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Memory System Content -->
+            <div id="memory-content" class="content-section">
+                <h3>Memory System</h3>
+                <p>
+                    The Memory System is a multi-component storage architecture centered in the hippocampus and temporal lobes. It maintains information across different timescales, including working memory for temporary storage, long-term memory for permanent storage, and specialized sensory memory stores.
+                </p>
+                <p>
+                    Working memory has limited capacity (approximately 7±2 chunks of information) and serves as a temporary workspace for cognitive operations. Long-term memory has virtually unlimited capacity and stores knowledge, experiences, procedural skills, and semantic information acquired over a lifetime.
+                </p>
+                <div class="specs">
+                    <h4>Technical Specifications</h4>
+                    <div class="spec-item">
+                        <span class="spec-label">Working Memory Capacity:</span>
+                        <span class="spec-value">7±2 chunks</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Primary Function:</span>
+                        <span class="spec-value">Information Storage & Retrieval</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Types:</span>
+                        <span class="spec-value">Working, Long-term, Sensory</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
